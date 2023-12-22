@@ -38,7 +38,7 @@ struct app : public window {
 
         app( const char* title, const vec2i& size ) : window( title, size ) {
             set_vsync( true );
-            set_icon( "../res/icons/icon.png" );
+            set_icon( "./res/icons/icon.png" );
 
             // get gpu info
             printf( "GPU: %s\n", glGetString( GL_RENDERER ) );
@@ -53,7 +53,7 @@ struct app : public window {
             
             ibo_.set_data( indices, 6 );
 
-            shader_.set_source("../res/shaders/vert.glsl", "../res/shaders/frag.glsl");
+            shader_.set_source("./res/shaders/vert.glsl", "./res/shaders/frag.glsl");
         }
 
         void on_user_update() override {
