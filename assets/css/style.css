@@ -1,0 +1,132 @@
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Mono&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:ital,wght@1,100&display=swap');
+
+:root {
+    --bg-color: #202020;
+    --fg-color: #3380ff;
+    --ac-color: #008049;
+
+    --bg0: #3380ff;
+    --bg1: #ff0000;
+    --bg2: #00ff00;
+    --bg3: #ffff00;
+
+    --font-family: 'IBM Plex Mono', monospace;
+}
+
+/* prevent horizontal scroll */
+*, *::before, *::after {
+    box-sizing: border-box;
+    scrollbar-width: none;
+
+    overflow: hidden;
+    font-family: var(--font-family);
+
+    /* debug */
+    /* outline: 1px solid red; */
+}
+
+html, body {
+    padding: 0%;
+    margin: 0%;
+
+    width: 100dvw;
+    height: 100dvh;
+
+    background-color: var(--bg-color);
+    color: var(--fg-color);
+
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+header {
+    width: 100dvw;
+    height: 10vh;
+
+    padding: 3rem;
+
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+header h1 {
+    font-size: 3rem;
+    font-weight: 400;
+    color: var(--fg-color);
+    text-align: center;
+    letter-spacing: 0.4rem;
+
+    @media screen and (max-width: 820px) {
+        font-size: 2rem;
+    }
+    @media screen and (max-width: 460px) {
+        font-size: 1.2rem;
+    }
+}
+
+header img {
+    border-radius: 50%;
+    /* padding: 0 2rem; */
+    width: 4rem;
+
+    @media screen and (max-width: 820px) {
+        width: 2rem;
+    }
+    @media screen and (max-width: 460px) {
+        width: 1.2rem;
+    }
+}
+
+main {
+    margin: auto;
+    width: 100dvw;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+main p {
+    padding: 0 3rem;
+    text-align: center;
+}
+
+main div {
+    position: relative;
+    background-color: var(--fg-color);
+    color: var(--bg-color);
+    z-index: 0;
+
+    padding: 3rem;
+}
+
+main div a {
+    color: var(--bg-color);
+
+}
+
+footer {
+    width: 100dvw;
+    height: 10vh;
+
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+a {
+    text-decoration: none;
+    color: var(--ac-color);
+    font-weight: 400;
+
+    padding: 0 0.5rem;
+}
+
